@@ -1,0 +1,11 @@
+---
+cask_manifest:
+  - alfred
+  - google-chrome
+  - spotify
+  - atom
+  - firefox
+  - thunderbird
+  - evernote
+  - virtualbox
+  - vagrant

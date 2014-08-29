@@ -1,0 +1,15 @@
+---
+- name: Add PHP to homebrew
+  homebrew_tap: tap=homebrew/php state=present
+
+- name: Install prerequisites
+  homebrew: name={{ item }} state=present
+  with_items:
+    - freetype
+    - jpeg
+    - libpng
+    - gd
+    - zlib
+
+- name: Install PHP 5.6
+  homebrew: name=php56 state=present install_options=with-fpm,homebrew-apxs,with-homebrew-openssl,with-homebrew-libxslt,with-gmp

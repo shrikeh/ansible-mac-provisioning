@@ -1,0 +1,5 @@
+---
+
+- name: Install brew
+  shell: 'ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"'
+  ignore_errors: yes

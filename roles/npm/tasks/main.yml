@@ -1,0 +1,7 @@
+---
+- name: Install good to have npm modules
+  npm: name={{ item }} state=present global=yes
+  with_items:
+    - git-encrypt
+    - cucumber
+    - mocha

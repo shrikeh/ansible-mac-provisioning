@@ -1,0 +1,7 @@
+---
+- hosts: mac
+  roles:
+    - brew
+    - cask
+    - npm
+    - brew-docker

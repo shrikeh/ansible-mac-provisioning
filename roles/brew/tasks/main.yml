@@ -1,0 +1,23 @@
+---
+
+- include: brew.yml
+
+- include: taps.yml
+
+- name: Install prerequisites
+  homebrew: name={{ item }} state=present
+  with_items:
+    - "{{ brew_manifest }}"
+
+- name: Update OpenSSH
+  homebrew: name=openssh state=present install_options=with-brewed-openssl,with-keychain-support
+
+- include: python.yml
+
+- include: php.yml
+
+- name: Link all apps
+  command: brew linkapps
+
+- name: Clean up
+  command: brew cleanup

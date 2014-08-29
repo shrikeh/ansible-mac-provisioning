@@ -1,0 +1,14 @@
+---
+- name: Install brew cask
+  command: brew install caskroom/cask/brew-cask
+
+- name: Install casks
+  homebrew_cask: name={{ item }} state=present
+  with_items:
+    - "{{ cask_manifest }}"
+
+- name: Link cask apps to Alfred
+  command: brew cask alfred
+
+- name: Cleanup casks
+  command: brew cask cleanup
