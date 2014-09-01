@@ -1,6 +1,7 @@
 ---
-- hosts: mac
+- hosts: local
   roles:
+    - mac
     - brew-php
     - brew-cask
     - brew-docker

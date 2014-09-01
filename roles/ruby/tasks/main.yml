@@ -3,13 +3,9 @@
   shell: gem update
 
 - name: Install bundler
-  gem: name=bundler state=present
-
-- name: Install rake
-  gem: name=rake state=present
-
-- name: Install hobo
-  gem: name=hobo-inviqa state=present
+  gem: name={{ item }} state=present
+  with_items:
+    - gems
 
 - name: Rehash rbenv
   shell: rbenv rehash

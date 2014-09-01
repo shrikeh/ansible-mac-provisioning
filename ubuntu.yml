@@ -1,0 +1,10 @@
+---
+
+- hosts: ubuntu
+  roles:
+    - ubuntu-php
+    - ubuntu-docker
+    - python
+    - npm
+    - rbenv
+    - ruby
