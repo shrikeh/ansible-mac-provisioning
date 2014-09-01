@@ -1,36 +1,4 @@
 ---
-brew_manifest:
-  - openssl
-  - curl
-  - wget
-  - bash
-  - zsh
-  - zsh-completions
-  - fish
-  - libxslt
-  - spark
-  - node
-  - gource
-  - readline
-  - git
-  - cmake
-  - pcre
-  - ruby-build
-  - rbenv
-  - gettext
-  - tcpdump
-  - tree
-  - gdbm
-  - dnsmasq
-  - hub
-  - libyaml
-  - hubflow
-  - tcpflow
-  - coreutils
-  - findutils
-  - gnu-tar
-  - gnutls
-  - gnu-getopt
-  - vim
-  - macvim
-  - bash-completion
+brew_manifests:
+  utils:
+    url: https://gist.githubusercontent.com/shrikeh/6144926caa851db02e02/raw/a764187bf1c17241790a501eb7db4646f7394526/brew.yml

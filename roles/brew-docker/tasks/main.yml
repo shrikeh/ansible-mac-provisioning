@@ -1,2 +1,6 @@
 ---
-  
+- name: Install docker
+  homebrew: name=docker state=present
+
+- name: Install boot2docker
+  homebrew: name=boot2docker state=present   

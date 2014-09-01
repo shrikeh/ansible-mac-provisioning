@@ -1,5 +1,6 @@
 ---
 
-- name: Install brew
-  shell: 'ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"'
-  ignore_errors: yes
+- name:           Install brew
+  shell:          'ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"'
+  ignore_errors:  yes
+  run_once:       true

@@ -1,7 +1,4 @@
 ---
-- name: Install Python
-  homebrew: name=python state=present install_options=framework
-
 - name: Update pip
   pip: name=pip state=latest extra_args='--upgrade'
 

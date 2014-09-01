@@ -1,7 +1,8 @@
 ---
 - hosts: mac
   roles:
-    - brew
-    - cask
-    - npm
+    - brew-php
+    - brew-cask
     - brew-docker
+    - python
+    - npm
