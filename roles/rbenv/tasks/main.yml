@@ -1,0 +1,6 @@
+---
+- name: Install the version of Ruby we need
+  shell: rbenv install --force {{ ruby_version }}
+
+- name: Set the version of Ruby as global
+  shell: rbenv global {{ ruby_version }}

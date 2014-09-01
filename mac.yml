@@ -6,3 +6,5 @@
     - brew-docker
     - python
     - npm
+    - rbenv
+    - ruby

@@ -1,5 +1,5 @@
 ---
-brew_manifest:
+brew_manifest_utils:
   - openssl
   - ant
   - curl

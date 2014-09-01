@@ -8,7 +8,6 @@
 - name: Fetch the remote manifests we need
   local_action: get_url url="{{ item.value.url }}" dest="/tmp/{{ item.key }}.yml" mode=0440
   with_dict: brew_manifests
-
   run_once: true
 
 - name: Include the manifests we need.
