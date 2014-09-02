@@ -1,6 +1,11 @@
 ---
 
+- name:           Check whether brew is already installed
+  stat:           path=/usr/local/bin/brew
+  ignore_errors:  true
+  register:       brew_installed
+
 - name:           Install brew
   shell:          'ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"'
-  ignore_errors:  yes
+  when:           brew_installed | failed
   run_once:       true

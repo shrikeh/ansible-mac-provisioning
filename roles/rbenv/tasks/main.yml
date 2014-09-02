@@ -1,6 +1,14 @@
 ---
-- name: Install the version of Ruby we need
-  shell: rbenv install --force {{ ruby_version }}
+- name:     Check if the correct version of Ruby is already installed
+  command:  "rbenv versions"
+  register: rbenv_ruby_version
 
-- name: Set the version of Ruby as global
-  shell: rbenv global {{ ruby_version }}
+- name:     Debug info
+  debug:    msg="{{ rbenv_ruby_version.stdout }}"
+
+- name:     Install the version of Ruby we need
+  shell:    rbenv install {{ ruby_version }}
+  when:     not rbenv_ruby_version.stdout | search("{{ruby_version}}")
+
+- name:     Set the version of Ruby as global
+  shell:    rbenv global {{ ruby_version }}
