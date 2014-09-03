@@ -1,11 +1,21 @@
 ---
-- name: Update the user gems
-  shell: gem update
 
-- name: Install bundler
-  gem: name={{ item }} state=present
-  with_items:
-    - gems
+- name:     Capture the path to the gem executable
+  command:  "which gem"
+  register: rbenv_gem_executable
+
+- name: Show the executable we are going to use
+  debug: msg="{{ rbenv_gem_executable }}"
+
+- name: Update the user gems
+  shell: "{{ rbenv_gem_executable.stdout | quote }} update"
+
+- name: Install gems
+  gem: name={{ item }} state=present user_install=yes executable="{{ rbenv_gem_executable.stdout }}"
+  with_items: gems
 
 - name: Rehash rbenv
   shell: rbenv rehash
+
+- name: Print gems
+  shell: "{{ rbenv_gem_executable.stdout | quote }} list"

@@ -17,8 +17,6 @@ brew_manifest_utils:
   - git
   - cmake
   - pcre
-  - ruby-build
-  - rbenv
   - gettext
   - tcpdump
   - tree

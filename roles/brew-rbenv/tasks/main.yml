@@ -1,0 +1,5 @@
+---
+- name: Install prerequisites
+  homebrew: name={{ item }} state=present
+  run_once: true
+  with_items: brew_rbenv_manifest

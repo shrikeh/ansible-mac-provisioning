@@ -1,0 +1,13 @@
+---
+brew_rbenv_manifest:
+  - ruby-build
+  - rbenv
+  - rbenv-gem-rehash
+  - rbenv-binstubs
+  - rbenv-use
+  - rbenv-gemset
+  - rbenv-aliases
+  - rbenv-readline
+  - rbenv-vars
+  - rbenv-whatis
+  - rbenv-default-gems

@@ -2,7 +2,9 @@
 - name: Add dupes to homebrew
   homebrew_tap: tap=homebrew/dupes state=present
   ignore_errors: yes
+  run_once: true
 
 - name: Add versions to homebrew
   homebrew_tap: tap=homebrew/versions state=present
   ignore_errors: yes
+  run_once: true

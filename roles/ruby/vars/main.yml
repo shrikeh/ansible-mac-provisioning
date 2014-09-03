@@ -1,5 +1,4 @@
 gems:
   - bundler
   - rake
-  - hobo
   - hobo-inviqa

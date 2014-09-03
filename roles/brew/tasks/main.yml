@@ -13,9 +13,11 @@
 - name: Include the manifests we need.
   include_vars: "/tmp/{{ item.key }}.yml"
   with_dict: brew_manifests
+  run_once: true
 
 - name: Install prerequisites
   homebrew: name={{ item }} state=present
+  run_once: true
   with_items:
     - "{{ brew_manifest }}"
 

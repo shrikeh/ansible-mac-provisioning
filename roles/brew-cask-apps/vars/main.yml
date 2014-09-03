@@ -1,6 +1,5 @@
 ---
 cask_manifest:
-  - adium
   - airstream
   - airfoil
   - audacity

@@ -1,12 +1,12 @@
 ---
 - hosts: local
   roles:
-    - { role: brew, when: ansible_os_family == 'Darwin'}
-    - { role: brew-php, when: ansible_os_family == 'Darwin'}
-    - { role: brew-python, when: ansible_os_family == 'Darwin'}
-    - { role: brew-cask, when: ansible_os_family == 'Darwin'}
-    - { role: brew-docker, when: ansible_os_family == 'Darwin'}
-    - python
-    - npm
+  #  - { role: brew-php, when: ansible_os_family == 'Darwin'}
+  #  - { role: brew-python, when: ansible_os_family == 'Darwin'}
+  #  - { role: brew-cask-apps, when: ansible_os_family == 'Darwin'}
+  #  - { role: brew-docker, when: ansible_os_family == 'Darwin'}
+  #  - python
+  #  - npm
+    - { role: brew-rbenv, when: ansible_os_family == 'Darwin'}
     - rbenv
     - ruby
