@@ -3,4 +3,7 @@
   homebrew: name=docker state=present
 
 - name: Install boot2docker
-  homebrew: name=boot2docker state=present   
+  homebrew: name=boot2docker state=present
+
+- name: Link cask apps to Alfred
+  command: brew cask alfred

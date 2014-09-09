@@ -68,6 +68,4 @@ cask_manifest:
   - firefox
   - thunderbird
   - evernote
-  - virtualbox
-  - vagrant
   - yubikey-personalization-gui

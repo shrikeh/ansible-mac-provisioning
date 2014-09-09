@@ -1,0 +1,11 @@
+---
+- name:     Install zsh via homebrew
+  homebrew: name=zsh state=present
+  when:     ansible_os_family == 'Darwin'
+
+- name:     Install zsh via apt
+  apt:      pkg=zsh state=present
+  when:     ansible_os_family == 'Debian'
+
+- name:     Install oh-my-zsh
+  shell:    curl {{ oh_my_zsh_url }} | sudo /bin/bash

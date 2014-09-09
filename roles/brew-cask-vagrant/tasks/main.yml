@@ -1,0 +1,12 @@
+---
+
+- name:           Install virtualbox
+  homebrew_cask:  name=virtualbox state=present
+  sudo:           yes
+
+- name:           Install vagrant
+  homebrew_cask:  name=vagrant state=present
+  sudo:           yes
+
+- name:           Link cask apps to Alfred
+  command:        brew cask alfred
